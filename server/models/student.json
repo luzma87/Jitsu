@@ -3,30 +3,61 @@
   "plural": "Students",
   "base": "PersistedModel",
   "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
   "postgresql": {
     "schema": "public",
     "table": "students"
   },
-  "options": {
-    "validateUpsert": true
-  },
   "properties": {
     "name": {
       "type": "string",
-      "required": true
+      "required": true,
+      "postgresql": {
+        "columnName": "name"
+      }
+    },
+    "documentId": {
+      "type": "string",
+      "postgresql": {
+        "columnName": "document_id"
+      }
     },
     "dob": {
-      "type": "date"
+      "type": "date",
+      "postgresql": {
+        "columnName": "dob"
+      }
     },
     "email": {
-      "type": "string"
+      "type": "string",
+      "postgresql": {
+        "columnName": "email"
+      }
     },
     "phone": {
-      "type": "string"
+      "type": "string",
+      "postgresql": {
+        "columnName": "phone"
+      }
     }
   },
   "validations": [],
   "relations": {},
-  "acls": [],
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    }
+  ],
   "methods": {}
 }
