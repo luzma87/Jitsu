@@ -25,6 +25,23 @@ function check_for_tool() {
   fi
 }
 
+function color(){
+    for c; do
+        printf '\e[48;5;%dm%03d' $c $c
+    done
+    printf '\e[0m \n'
+}
+
+function task_color {
+  # https://unix.stackexchange.com/a/269085
+  IFS=$' \t\n'
+  color {0..15}
+  for ((i=0;i<6;i++)); do
+      color $(seq $((i*36+16)) $((i*36+51)))
+  done
+  color {232..255}
+}
+
 function task_start {
   check_for_tool "node" "nvm install node"
 
@@ -48,23 +65,6 @@ function task_start_remote_debug {
   # https://loopback.io/doc/en/lb2/Setting-debug-strings.html
   echo "${start_fg}Starting app showing ALL debug info${normal_fg}"
   DEBUG=strong-remoting* node .
-}
-
-function color(){
-    for c; do
-        printf '\e[48;5;%dm%03d' $c $c
-    done
-    printf '\e[0m \n'
-}
-
-function task_color {
-  # https://unix.stackexchange.com/a/269085
-  IFS=$' \t\n'
-  color {0..15}
-  for ((i=0;i<6;i++)); do
-      color $(seq $((i*36+16)) $((i*36+51)))
-  done
-  color {232..255}
 }
 
 function task_clear_port {
