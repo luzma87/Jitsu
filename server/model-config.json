@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "jitsu"
+  },
+  "AccessToken": {
+    "dataSource": "jitsu",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "jitsu",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "jitsu",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "jitsu",
+    "public": false
+  },
+  "Student": {
+    "dataSource": "jitsu",
+    "public": true
+  }
+}

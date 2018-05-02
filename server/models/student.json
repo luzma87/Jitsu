@@ -1,0 +1,32 @@
+{
+  "name": "Student",
+  "plural": "Students",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "postgresql": {
+    "schema": "public",
+    "table": "students"
+  },
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "dob": {
+      "type": "date"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

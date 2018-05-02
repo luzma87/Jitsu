@@ -1,0 +1,12 @@
+{
+  "jitsu": {
+    "host": "localhost",
+    "port": 5432,
+    "url": "postgres://postgres:postgres@localhost/jitsu",
+    "database": "jitsu",
+    "password": "postgres",
+    "name": "jitsu",
+    "user": "postgres",
+    "connector": "postgresql"
+  }
+}
