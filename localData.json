@@ -1,0 +1,56 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "Rank": 8,
+    "MethodOfPayment": 3,
+    "Plan": 4,
+    "MaritalStatus": 6,
+    "Params": 2,
+    "Student": 3,
+    "Payment": 1
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "Rank": {
+      "1": "{\"code\":\"BC0\",\"description\":\"Blanco\",\"imagePath\":\"blanco.png\",\"id\":1}",
+      "2": "{\"code\":\"BC1\",\"description\":\"Blanco 1 stripe\",\"imagePath\":\"blanco1.png\",\"id\":2}",
+      "3": "{\"code\":\"BC2\",\"description\":\"Blanco 2 stripe\",\"imagePath\":\"blanco2.png\",\"id\":3}",
+      "4": "{\"code\":\"BC3\",\"description\":\"Blanco 3 stripe\",\"imagePath\":\"blanco3.png\",\"id\":4}",
+      "5": "{\"code\":\"BC4\",\"description\":\"Blanco 4 stripe\",\"imagePath\":\"blanco4.png\",\"id\":5}",
+      "6": "{\"code\":\"GC\",\"description\":\"Gracie Combative\",\"imagePath\":\"gracie.png\",\"id\":6}",
+      "7": "{\"code\":\"AZL\",\"description\":\"Azul\",\"imagePath\":\"azul.png\",\"id\":7}"
+    },
+    "MethodOfPayment": {
+      "1": "{\"code\":\"EFC\",\"description\":\"Efectivo\",\"id\":1}",
+      "2": "{\"code\":\"TRJ\",\"description\":\"Tarjeta\",\"id\":2}"
+    },
+    "Plan": {
+      "1": "{\"description\":\"Niño 4 clases\",\"code\":\"KDL\",\"price\":45,\"id\":1}",
+      "2": "{\"description\":\"Niño ilimitado\",\"code\":\"KDU\",\"price\":60,\"id\":2}",
+      "3": "{\"description\":\"Adulto\",\"code\":\"ADL\",\"price\":75,\"id\":3}"
+    },
+    "MaritalStatus": {
+      "1": "{\"code\":\"CSD\",\"description\":\"Casado/a\",\"id\":1}",
+      "2": "{\"code\":\"SLT\",\"description\":\"Soltero/a\",\"id\":2}",
+      "3": "{\"code\":\"DVR\",\"description\":\"Divorciado/a\",\"id\":3}",
+      "4": "{\"code\":\"VDO\",\"description\":\"Viudo/a\",\"id\":4}",
+      "5": "{\"code\":\"UNL\",\"description\":\"Union Libre\",\"id\":5}"
+    },
+    "Params": {
+      "1": "{\"annualFee\":60,\"id\":1}"
+    },
+    "Student": {
+      "1": "{\"documentId\":\"1234567890\",\"firstName\":\"Adulto Uno\",\"lastName\":\"Apellido\",\"dateOfBirth\":\"1988-06-10T17:41:25.428Z\",\"email\":\"mio@mail.com\",\"gender\":\"M\",\"address\":\"Una direccion cualuiera\",\"countryOfBirth\":\"Ecuador\",\"cityOfBirth\":\"Quito\",\"phone\":\"02234564\",\"mobilePhone\":\"09923456786\",\"height\":167,\"weight\":200,\"giSize\":\"5B\",\"planId\":1,\"rankId\":1,\"methodOfPaymentId\":1,\"isActive\":true,\"registrationDate\":\"2018-06-01T17:41:25.428Z\",\"enrollmentDate\":\"2018-06-19T17:41:25.428Z\",\"trialEnd\":\"2018-06-10T17:41:25.428Z\",\"emergencyContactName\":\"Contacto Emergencia\",\"emergencyContactPhone\":\"0987654321\",\"maritalStatusId\":2,\"id\":1}",
+      "2": "{\"documentId\":\"1234567891\",\"firstName\":\"Niño Uno\",\"lastName\":\"Otro Apellido\",\"dateOfBirth\":\"2010-06-10T17:41:25.428Z\",\"email\":\"madre@mail.com\",\"gender\":\"F\",\"address\":\"Otra direccion cualquiera\",\"countryOfBirth\":\"Ecuador\",\"cityOfBirth\":\"Cuenca\",\"phone\":\"02344564\",\"mobilePhone\":\"09764820\",\"height\":107,\"weight\":50,\"foundOut\":\"Amigo\",\"medicalConditions\":\"Algo\",\"giSize\":\"A0\",\"planId\":2,\"rankId\":1,\"methodOfPaymentId\":2,\"isActive\":true,\"registrationDate\":\"2018-06-02T17:41:25.428Z\",\"enrollmentDate\":\"2018-06-25T17:41:25.428Z\",\"trialEnd\":\"2018-06-12T17:41:25.428Z\",\"emergencyContactName\":\"Contacto de emergencia\",\"emergencyContactPhone\":\"024443335\",\"legalGuardianName\":\"Madre Apellido\",\"legalGuardianPhone\":\"0977766654\",\"id\":2}"
+    },
+    "Payment": {}
+  }
+}
