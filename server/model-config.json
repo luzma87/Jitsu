@@ -52,6 +52,10 @@
     "dataSource": "jitsu",
     "public": true
   },
+  "Params": {
+    "dataSource": "jitsu",
+    "public": true
+  },
   "Student": {
     "dataSource": "jitsu",
     "public": true

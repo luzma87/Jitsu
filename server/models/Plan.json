@@ -54,6 +54,21 @@
         "dataScale": null,
         "nullable": "NO"
       }
+    },
+    "price": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "price",
+        "dataType": "numeric",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "NO"
+      }
     }
   },
   "relations": {}

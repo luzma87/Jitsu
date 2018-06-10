@@ -1,0 +1,44 @@
+{
+  "name": "Params",
+  "options": {
+    "idInjection": false,
+    "postgresql": {
+      "schema": "public",
+      "table": "params"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": 0,
+      "id": 1,
+      "postgresql": {
+        "columnName": "id",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": 0,
+        "nullable": "NO"
+      }
+    },
+    "annualFee": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "annual_fee",
+        "dataType": "numeric",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "NO"
+      }
+    }
+  },
+  "relations": {}
+}
