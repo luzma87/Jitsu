@@ -1,0 +1,471 @@
+{
+  "name": "Student",
+  "plural": "Students",
+  "options": {
+    "idInjection": false,
+    "postgresql": {
+      "schema": "public",
+      "table": "students"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": 0,
+      "id": 1,
+      "postgresql": {
+        "columnName": "id",
+        "dataType": "integer",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": 0,
+        "nullable": "NO"
+      }
+    },
+    "documentId": {
+      "type": "String",
+      "required": false,
+      "length": 10,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "document_id",
+        "dataType": "character",
+        "dataLength": 10,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "firstName": {
+      "type": "String",
+      "required": false,
+      "length": 63,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "first_name",
+        "dataType": "character varying",
+        "dataLength": 63,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "lastName": {
+      "type": "String",
+      "required": false,
+      "length": 63,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "last_name",
+        "dataType": "character varying",
+        "dataLength": 63,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "dateOfBirth": {
+      "type": "Date",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "date_of_birth",
+        "dataType": "date",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "email": {
+      "type": "String",
+      "required": false,
+      "length": 127,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "email",
+        "dataType": "character varying",
+        "dataLength": 127,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "gender": {
+      "type": "String",
+      "required": false,
+      "length": 1,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "gender",
+        "dataType": "character",
+        "dataLength": 1,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "address": {
+      "type": "String",
+      "required": false,
+      "length": 2047,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "address",
+        "dataType": "character varying",
+        "dataLength": 2047,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "countryOfBirth": {
+      "type": "String",
+      "required": false,
+      "length": 127,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "country_of_birth",
+        "dataType": "character varying",
+        "dataLength": 127,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "cityOfBirth": {
+      "type": "String",
+      "required": false,
+      "length": 127,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "city_of_birth",
+        "dataType": "character varying",
+        "dataLength": 127,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "phone": {
+      "type": "String",
+      "required": false,
+      "length": 31,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "phone",
+        "dataType": "character varying",
+        "dataLength": 31,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "mobilePhone": {
+      "type": "String",
+      "required": false,
+      "length": 31,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "mobile_phone",
+        "dataType": "character varying",
+        "dataLength": 31,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "height": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "height",
+        "dataType": "numeric",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "weight": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "weight",
+        "dataType": "numeric",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "foundOut": {
+      "type": "String",
+      "required": false,
+      "length": 255,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "found_out",
+        "dataType": "character varying",
+        "dataLength": 255,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "medicalConditions": {
+      "type": "String",
+      "required": false,
+      "length": 2047,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "medical_conditions",
+        "dataType": "character varying",
+        "dataLength": 2047,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "giSize": {
+      "type": "String",
+      "required": false,
+      "length": 10,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "gi_size",
+        "dataType": "character varying",
+        "dataLength": 10,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "planId": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "plan_id",
+        "dataType": "bigint",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "rankId": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "rank_id",
+        "dataType": "bigint",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "methodOfPaymentId": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "method_of_payment_id",
+        "dataType": "bigint",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    },
+    "isActive": {
+      "type": "Boolean",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "is_active",
+        "dataType": "boolean",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "registrationDate": {
+      "type": "Date",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "registration_date",
+        "dataType": "date",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "enrollmentDate": {
+      "type": "Date",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "enrollment_date",
+        "dataType": "date",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "trialEnd": {
+      "type": "Date",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "trial_end",
+        "dataType": "date",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "emergencyContactName": {
+      "type": "String",
+      "required": false,
+      "length": 63,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "emergency_contact_name",
+        "dataType": "character varying",
+        "dataLength": 63,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "emergencyContactPhone": {
+      "type": "String",
+      "required": false,
+      "length": 63,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "emergency_contact_phone",
+        "dataType": "character varying",
+        "dataLength": 63,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "legalGuardianName": {
+      "type": "String",
+      "required": false,
+      "length": 63,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "legal_guardian_name",
+        "dataType": "character varying",
+        "dataLength": 63,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "legalGuardianPhone": {
+      "type": "String",
+      "required": false,
+      "length": 63,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "legal_guardian_phone",
+        "dataType": "character varying",
+        "dataLength": 63,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "YES"
+      }
+    },
+    "maritalStatusId": {
+      "type": "Number",
+      "required": false,
+      "length": null,
+      "precision": null,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "marital_status_id",
+        "dataType": "bigint",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": 0,
+        "nullable": "YES"
+      }
+    }
+  },
+  "relations": {
+    "plan": {
+      "model": "Plan",
+      "type": "belongsTo",
+      "foreignKey": "planId"
+    },
+    "maritalStatus": {
+      "model": "MaritalStatus",
+      "type": "belongsTo",
+      "foreignKey": "maritalStatusId"
+    },
+    "rank": {
+      "model": "Rank",
+      "type": "belongsTo",
+      "foreignKey": "rankId"
+    },
+    "methodOfPayment": {
+      "model": "MethodOfPayment",
+      "type": "belongsTo",
+      "foreignKey": "methodOfPaymentId"
+    }
+  }
+}

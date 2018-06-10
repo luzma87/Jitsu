@@ -14,7 +14,8 @@
     ]
   },
   "User": {
-    "dataSource": "jitsu"
+    "dataSource": "jitsu",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "jitsu",
@@ -35,7 +36,27 @@
     "dataSource": "jitsu",
     "public": false
   },
+  "Rank": {
+    "dataSource": "jitsu",
+    "public": true
+  },
+  "MethodOfPayment": {
+    "dataSource": "jitsu",
+    "public": true
+  },
+  "Plan": {
+    "dataSource": "jitsu",
+    "public": true
+  },
+  "MaritalStatus": {
+    "dataSource": "jitsu",
+    "public": true
+  },
   "Student": {
+    "dataSource": "jitsu",
+    "public": true
+  },
+  "Payment": {
     "dataSource": "jitsu",
     "public": true
   }
