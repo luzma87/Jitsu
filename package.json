@@ -8,6 +8,7 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
+    "test": "mocha",
     "check": "nsp check",
     "posttest": "npm run lint && nsp check"
   },
@@ -19,11 +20,13 @@
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^6.0.0",
     "loopback-connector-postgresql": "^3.3.1",
+    "moment": "^2.22.2",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^2.0.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
+    "chance": "^1.0.16",
     "eslint": "^4.19.1",
     "eslint-config-loopback": "^10.0.0",
     "mocha": "^5.0.5",

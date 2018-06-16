@@ -129,6 +129,21 @@
         "dataScale": 0,
         "nullable": "NO"
       }
+    },
+    "methodOfPaymentId": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": null,
+      "scale": 0,
+      "postgresql": {
+        "columnName": "method_of_payment_id",
+        "dataType": "bigint",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": 0,
+        "nullable": "NO"
+      }
     }
   },
   "relations": {
