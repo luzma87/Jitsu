@@ -3,12 +3,17 @@ const _ = require('lodash');
 const moment = require('moment');
 
 const getMonthlyPayment = (student, month, year) => {
-  let enrollmentDate = moment(student.enrollmentDate, 'YYYY-MM-DD');
+  const enrollmentDate = moment(student.enrollmentDate, 'YYYY-MM-DD');
   let daysToEndOfMonth = 30 - enrollmentDate.date() + 1;
   if (daysToEndOfMonth < 0) {
     daysToEndOfMonth = 0;
   }
-  const amountDue = _.round(daysToEndOfMonth * student.plan.price / 30, 2);
+  let amountDue = student.plan.price;
+
+  const enrollmentMonth = enrollmentDate.month() + 1;
+  if (enrollmentMonth === parseInt(month)) {
+    amountDue = _.round(daysToEndOfMonth * student.plan.price / 30, 2);
+  }
 
   return {
     studentId: student.id,
