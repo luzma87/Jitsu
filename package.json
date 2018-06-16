@@ -8,9 +8,8 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
-    "test": "mocha",
-    "check": "nsp check",
-    "posttest": "npm run lint && nsp check"
+    "test": "mocha --recursive 'test' --reporter nyan",
+    "check": "nsp check"
   },
   "dependencies": {
     "compression": "^1.0.3",
