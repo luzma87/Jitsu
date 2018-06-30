@@ -27,6 +27,22 @@ const getMonthlyPayment = (student, month, year) => {
   };
 };
 
+const getAllMonthlyPayments = (students, monthPayments, month, year) => {
+  let allPayments = [];
+  students.forEach((student) => {
+    const studentPayment = monthPayments.filter((payment) => {
+      return payment.studentId === student.id &&
+             payment.month === month &&
+             payment.year === year;
+    });
+    if (studentPayment.length === 0) {
+      allPayments.push(getMonthlyPayment(student, month, year));
+    }
+  });
+  return allPayments;
+};
+
 module.exports = {
-  getMonthlyPayment: getMonthlyPayment,
+  getMonthlyPayment,
+  getAllMonthlyPayments,
 };

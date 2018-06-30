@@ -149,4 +149,96 @@ describe('PaymentService', () => {
       expect(payment).to.deep.equal(expectedPayment);
     });
   });
+
+  describe('getAllMonthlyPayments', () => {
+    it('should return the monthly payment for each student' +
+       'when none have a record for the given month/year', () => {
+      const { month, year } = generateDate();
+
+      const studentCount = chance.integer({ min: 1, max: 10 });
+      let students = [];
+      let expectedPayments = [];
+      const monthPayments = [];
+
+      for (let i = 0; i < studentCount; i += 1) {
+        let day = chance.integer({ min: 1, max: 28 });
+        const parsedDay = _.padStart(day, 2, '0');
+        const enrollmentDate = `${year}-${month}-${parsedDay}`;
+        const student = generateStudent(enrollmentDate);
+        const { plan, methodOfPayment } = student;
+        const daysToEndOfMonth = 30 - day + 1;
+        const partialPrice = _.round(daysToEndOfMonth * plan.price / 30, 2);
+        const expectedPayment = {
+          studentId: student.id,
+          date: null,
+          amountDue: partialPrice,
+          amountPayed: null,
+          month: month,
+          year: year,
+          planId: plan.id,
+          methodOfPaymentId: methodOfPayment.id,
+        };
+        students.push(student);
+        expectedPayments.push(expectedPayment);
+      }
+
+      const allPayments = PaymentService.getAllMonthlyPayments(students,
+        monthPayments, month, year);
+
+      expect(allPayments).to.deep.equal(expectedPayments);
+    });
+
+    it('should return the monthly payment for the students' +
+       'that do not have a record for the given month/year', () => {
+      const { month, year } = generateDate();
+
+      const studentCount = chance.integer({ min: 5, max: 10 });
+      let students = [];
+      let expectedPayments = [];
+      let monthPayments = [];
+
+      for (let i = 0; i < studentCount; i += 1) {
+        let day = chance.integer({ min: 1, max: 28 });
+        const parsedDay = _.padStart(day, 2, '0');
+        const enrollmentDate = `${year}-${month}-${parsedDay}`;
+        const student = generateStudent(enrollmentDate);
+        const { plan, methodOfPayment } = student;
+        const daysToEndOfMonth = 30 - day + 1;
+        const partialPrice = _.round(daysToEndOfMonth * plan.price / 30, 2);
+        const expectedPayment = {
+          studentId: student.id,
+          date: null,
+          amountDue: partialPrice,
+          amountPayed: null,
+          month: month,
+          year: year,
+          planId: plan.id,
+          methodOfPaymentId: methodOfPayment.id,
+        };
+        if (i <= 3) {
+          const paymentDate = `${year}-${month}-01`;
+          const studentPayment = {
+            id: chance.integer(),
+            studentId: student.id,
+            date: paymentDate,
+            amountDue: partialPrice,
+            amountPayed: partialPrice,
+            month,
+            year,
+            planId: plan.id,
+            methodOfPaymentId: methodOfPayment.id,
+          };
+          monthPayments.push(studentPayment);
+        } else {
+          expectedPayments.push(expectedPayment);
+        }
+        students.push(student);
+      }
+
+      const allPayments = PaymentService.getAllMonthlyPayments(students,
+        monthPayments, month, year);
+
+      expect(allPayments).to.deep.equal(expectedPayments);
+    });
+  });
 });
