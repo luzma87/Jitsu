@@ -50,6 +50,14 @@ function task_start {
   node .
 }
 
+function task_clean {
+  echo "${start_fg}Cleaning app${normal_fg}"
+  echo -e "${start_fg}\tDeleting node modules${normal_fg}"
+  rm -rf node_modules
+  echo -e "${start_fg}\tReinstalling node modules${normal_fg}"
+  npm install
+}
+
 function task_start_db_debug {
   # https://loopback.io/doc/en/lb2/Setting-debug-strings.html
   echo "${start_fg}Starting app showing postgres debug info${normal_fg}"
@@ -107,6 +115,7 @@ function task_help {
   help_message+=" | ${loopback_fg}generate_loopback_tables${normal_fg}"
   help_message+=" | ${loopback_fg}build_models${normal_fg}"
 
+  help_message+=" | ${start_fg}clean${normal_fg}"
   help_message+=" | ${start_fg}start${normal_fg}"
   help_message+=" | ${start_fg}start_debug${normal_fg}"
   help_message+=" | ${start_fg}start_db_debug${normal_fg}"
@@ -128,6 +137,7 @@ function execute_task {
     build_models) task_build_models ;;
     generate_loopback_tables) task_generate_loopback_tables ;;
 
+    clean) task_clean ;;
     start) task_start ;;
     start_debug) task_start_debug ;;
     start_db_debug) task_start_db_debug ;;
