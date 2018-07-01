@@ -1,29 +1,30 @@
 'use strict';
 
+const PaymentService = require('../services/PaymentService');
+const responseHelper = require('../utils/responseHelper');
+
 module.exports = function(Payment) {
   Payment.disableRemoteMethodByName('deleteById');
 
   Payment.createForMonth = async (params) => {
     const month = params.month;
     const year = params.year;
-    let monthYear = `${month} ${year}`;
+    let Student = Payment.app.models.Student;
 
-    /*
-    para cada estudiante activo con fecha de enrollment
-      busco en pagos por mes/año/estudiante
-      si esta => return
-      else
-        busco el valor del plan del estudiante
-        busco fecha enrollment del estudiante
-        si la fecha de enrollment es este mes
-          genero el cobro parcial
-        else
-          genero el cobro mensual
-    */
+    const monthPayments = await Payment.find({ where: { month, year } }).catch(err => {
+      return responseHelper.buildError(`error finding payments: ${err}`, 500);
+    });
+    const students = await Student.find().catch(err => {
+      return responseHelper.buildError(`error finding students: ${err}`, 500);
+    });
 
-    console.log('----------------------------------');
-    console.log(params);
-    console.log('----------------------------------');
+    const allPayments = PaymentService.getAllMonthlyPayments(students,
+      monthPayments, month, year);
+
+    const res = await Payment.create(allPayments).catch(err => {
+      return responseHelper.buildError(`error inserting payments: ${err}`, 500);
+    });
+    return responseHelper.buildResponse(res, 201);
   };
 
   Payment.createMultipleForStudent = async (params) => {
