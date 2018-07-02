@@ -312,7 +312,7 @@
     },
     "isActive": {
       "type": "Boolean",
-      "required": false,
+      "required": true,
       "length": null,
       "precision": null,
       "scale": null,
