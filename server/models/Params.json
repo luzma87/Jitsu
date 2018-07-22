@@ -38,6 +38,21 @@
         "dataScale": null,
         "nullable": "NO"
       }
+    },
+    "daysFree": {
+      "type": "Number",
+      "required": true,
+      "length": null,
+      "precision": null,
+      "scale": null,
+      "postgresql": {
+        "columnName": "days_free",
+        "dataType": "numeric",
+        "dataLength": null,
+        "dataPrecision": null,
+        "dataScale": null,
+        "nullable": "NO"
+      }
     }
   },
   "relations": {}
