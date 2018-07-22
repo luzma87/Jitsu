@@ -45,7 +45,7 @@
       "5": "{\"code\":\"UNL\",\"description\":\"Union Libre\",\"id\":5}"
     },
     "Params": {
-      "1": "{\"annualFee\":60,\"id\":1}"
+      "1": "{\"annualFee\":60,\"daysFree\":10,\"id\":1}"
     },
     "Student": {},
     "Payment": {}
