@@ -1,0 +1,53 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "Rank": 8,
+    "MethodOfPayment": 3,
+    "Plan": 4,
+    "MaritalStatus": 6,
+    "Params": 2,
+    "Student": 1,
+    "Payment": 1
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "Rank": {
+      "1": "{\"code\":\"BC0\",\"description\":\"Blanco\",\"imagePath\":\"blanco.png\",\"id\":1}",
+      "2": "{\"code\":\"BC1\",\"description\":\"Blanco 1 stripe\",\"imagePath\":\"blanco1.png\",\"id\":2}",
+      "3": "{\"code\":\"BC2\",\"description\":\"Blanco 2 stripe\",\"imagePath\":\"blanco2.png\",\"id\":3}",
+      "4": "{\"code\":\"BC3\",\"description\":\"Blanco 3 stripe\",\"imagePath\":\"blanco3.png\",\"id\":4}",
+      "5": "{\"code\":\"BC4\",\"description\":\"Blanco 4 stripe\",\"imagePath\":\"blanco4.png\",\"id\":5}",
+      "6": "{\"code\":\"GC\",\"description\":\"Gracie Combative\",\"imagePath\":\"gracie.png\",\"id\":6}",
+      "7": "{\"code\":\"AZL\",\"description\":\"Azul\",\"imagePath\":\"azul.png\",\"id\":7}"
+    },
+    "MethodOfPayment": {
+      "1": "{\"code\":\"EFC\",\"description\":\"Efectivo\",\"id\":1}",
+      "2": "{\"code\":\"TRJ\",\"description\":\"Tarjeta\",\"id\":2}"
+    },
+    "Plan": {
+      "1": "{\"description\":\"Niño 4 clases\",\"code\":\"KDL\",\"price\":45,\"id\":1}",
+      "2": "{\"description\":\"Niño ilimitado\",\"code\":\"KDU\",\"price\":60,\"id\":2}",
+      "3": "{\"description\":\"Adulto\",\"code\":\"ADL\",\"price\":75,\"id\":3}"
+    },
+    "MaritalStatus": {
+      "1": "{\"code\":\"CSD\",\"description\":\"Casado/a\",\"id\":1}",
+      "2": "{\"code\":\"SLT\",\"description\":\"Soltero/a\",\"id\":2}",
+      "3": "{\"code\":\"DVR\",\"description\":\"Divorciado/a\",\"id\":3}",
+      "4": "{\"code\":\"VDO\",\"description\":\"Viudo/a\",\"id\":4}",
+      "5": "{\"code\":\"UNL\",\"description\":\"Union Libre\",\"id\":5}"
+    },
+    "Params": {
+      "1": "{\"annualFee\":60,\"id\":1}"
+    },
+    "Student": {},
+    "Payment": {}
+  }
+}
