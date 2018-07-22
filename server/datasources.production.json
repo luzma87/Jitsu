@@ -1,0 +1,7 @@
+{
+  "jitsu": {
+    "name": "jitsu",
+    "connector": "memory",
+    "file": "localData-prod.json"
+  }
+}
