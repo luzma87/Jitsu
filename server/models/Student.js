@@ -7,11 +7,13 @@ module.exports = function(Student) {
 
   const updateActiveStatus = async (ids, newValue) => {
     let whereFilter = { id: { inq: ids } };
-    const res = await Student.updateAll(whereFilter, { isActive: newValue })
-      .catch(err => {
-        return responseHelper.buildError(`error updating isActive=${newValue} students: ${err}`,
-          500);
-      });
+    let res;
+    try {
+      res = await Student.updateAll(whereFilter, { isActive: newValue });
+    } catch (err) {
+      const action = newValue ? 'activando' : 'desactivando';
+      responseHelper.throwError(err, `Error ${action} estudiantes`);
+    }
     return responseHelper.buildResponse(res, 200);
   };
 
