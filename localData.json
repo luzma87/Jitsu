@@ -11,7 +11,7 @@
     "MaritalStatus": 6,
     "Params": 2,
     "Student": 19,
-    "Payment": 1
+    "Payment": 37
   },
   "models": {
     "User": {},
@@ -67,6 +67,43 @@
       "17": "{\"id\":17,\"documentId\":\"9349349349\",\"firstName\":\"Harry\",\"lastName\":\"Potter\",\"dateOfBirth\":\"1977-09-20T00:00:00.000Z\",\"email\":\"harry@potter.com\",\"gender\":\"M\",\"address\":\"Private Drive\",\"countryOfBirth\":\"England\",\"cityOfBirth\":\"London\",\"phone\":\"12312332123\",\"mobilePhone\":\"123123123123\",\"height\":170,\"weight\":140,\"foundOut\":\"Daily prophet\",\"medicalConditions\":\"Cicatriz en la frente\",\"giSize\":\"Small\",\"planId\":3,\"rankId\":7,\"methodOfPaymentId\":1,\"isActive\":false,\"registrationDate\":\"2018-07-17T00:00:00.000Z\",\"enrollmentDate\":\"2018-09-21T00:00:00.000Z\",\"emergencyContactName\":\"Hagrid\",\"emergencyContactPhone\":\"123123111\",\"legalGuardianName\":null,\"legalGuardianPhone\":null,\"maritalStatusId\":2}",
       "18": "{\"id\":18,\"documentId\":\"1231111111\",\"firstName\":\"Milton\",\"lastName\":\"Recursivo\",\"dateOfBirth\":\"2003-07-22T00:00:00.000Z\",\"email\":\"test@test.com\",\"gender\":\"M\",\"address\":\"san carlos\",\"countryOfBirth\":\"Ecuador\",\"cityOfBirth\":\"Quito\",\"phone\":\"123123123\",\"mobilePhone\":\"123123\",\"height\":123,\"weight\":123,\"foundOut\":\"telefono\",\"medicalConditions\":\"no\",\"giSize\":\"small\",\"planId\":3,\"rankId\":2,\"methodOfPaymentId\":1,\"isActive\":true,\"registrationDate\":\"2018-07-22T00:00:00.000Z\",\"enrollmentDate\":null,\"emergencyContactName\":\"test\",\"emergencyContactPhone\":\"test\",\"legalGuardianName\":null,\"legalGuardianPhone\":null,\"maritalStatusId\":2}"
     },
-    "Payment": {}
+    "Payment": {
+      "1": "{\"studentId\":1,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":1,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":1}",
+      "2": "{\"studentId\":2,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":1,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":2}",
+      "3": "{\"studentId\":3,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":1,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":3}",
+      "4": "{\"studentId\":4,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":1,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":4}",
+      "5": "{\"studentId\":5,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":1,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":5}",
+      "6": "{\"studentId\":6,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":1,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":6}",
+      "7": "{\"studentId\":7,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":1,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":7}",
+      "8": "{\"studentId\":8,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":1,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":8}",
+      "9": "{\"studentId\":9,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":1,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":9}",
+      "10": "{\"studentId\":10,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":1,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":10}",
+      "11": "{\"studentId\":11,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":1,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":11}",
+      "12": "{\"studentId\":12,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":1,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":12}",
+      "13": "{\"studentId\":13,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":1,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":13}",
+      "14": "{\"studentId\":14,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":1,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":14}",
+      "15": "{\"studentId\":15,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":1,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":15}",
+      "16": "{\"studentId\":16,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":1,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":2,\"id\":16}",
+      "17": "{\"studentId\":17,\"date\":null,\"amountDue\":75,\"amountPayed\":null,\"month\":1,\"year\":2018,\"planId\":3,\"methodOfPaymentId\":1,\"id\":17}",
+      "18": "{\"studentId\":18,\"date\":null,\"amountDue\":75,\"amountPayed\":null,\"month\":1,\"year\":2018,\"planId\":3,\"methodOfPaymentId\":1,\"id\":18}",
+      "19": "{\"studentId\":1,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":2,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":19}",
+      "20": "{\"studentId\":2,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":2,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":20}",
+      "21": "{\"studentId\":3,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":2,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":21}",
+      "22": "{\"studentId\":4,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":2,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":22}",
+      "23": "{\"studentId\":5,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":2,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":23}",
+      "24": "{\"studentId\":6,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":2,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":24}",
+      "25": "{\"studentId\":7,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":2,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":25}",
+      "26": "{\"studentId\":8,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":2,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":26}",
+      "27": "{\"studentId\":9,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":2,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":27}",
+      "28": "{\"studentId\":10,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":2,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":28}",
+      "29": "{\"studentId\":11,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":2,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":29}",
+      "30": "{\"studentId\":12,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":2,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":30}",
+      "31": "{\"studentId\":13,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":2,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":31}",
+      "32": "{\"studentId\":14,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":2,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":32}",
+      "33": "{\"studentId\":15,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":2,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":1,\"id\":33}",
+      "34": "{\"studentId\":16,\"date\":null,\"amountDue\":45,\"amountPayed\":null,\"month\":2,\"year\":2018,\"planId\":1,\"methodOfPaymentId\":2,\"id\":34}",
+      "35": "{\"studentId\":17,\"date\":null,\"amountDue\":75,\"amountPayed\":null,\"month\":2,\"year\":2018,\"planId\":3,\"methodOfPaymentId\":1,\"id\":35}",
+      "36": "{\"studentId\":18,\"date\":null,\"amountDue\":75,\"amountPayed\":null,\"month\":2,\"year\":2018,\"planId\":3,\"methodOfPaymentId\":1,\"id\":36}"
+    }
   }
 }

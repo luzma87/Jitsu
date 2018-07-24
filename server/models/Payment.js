@@ -9,7 +9,7 @@ module.exports = function(Payment) {
   Payment.createForMonth = async (params) => {
     const month = params.month;
     const year = params.year;
-    let Student = Payment.app.models.Student;
+    const Student = Payment.app.models.Student;
     let monthPayments, students;
 
     try {
@@ -18,7 +18,7 @@ module.exports = function(Payment) {
       responseHelper.throwError(err, 'Error buscando pagos');
     }
     try {
-      students = await Student.find();
+      students = await Student.find({ include: ['plan', 'methodOfPayment'] });
     } catch (err) {
       responseHelper.throwError(err, 'Error buscando estudiantes');
     }
@@ -63,11 +63,16 @@ module.exports = function(Payment) {
       status: 201,
     },
     accepts: [
-      { arg: 'data', type: 'object', 'http': { source: 'body' } },
+      {
+        arg: 'data',
+        description: 'receives month and year as integers {"month":1,"year":2018}',
+        http: { source: 'body' },
+        type: 'object',
+      },
     ],
     returns: {
       arg: 'result',
-      type: 'string',
+      type: 'array',
     },
   });
 
