@@ -156,6 +156,11 @@
       "model": "Student",
       "type": "belongsTo",
       "foreignKey": "studentId"
+    },
+    "methodOfPayment": {
+      "model": "MethodOfPayment",
+      "type": "belongsTo",
+      "foreignKey": "methodOfPaymentId"
     }
   }
 }

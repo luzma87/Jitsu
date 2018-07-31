@@ -7,6 +7,7 @@ module.exports = function(Payment) {
   Payment.disableRemoteMethodByName('deleteById');
 
   Payment.createForMonth = async (params) => {
+    console.log('Create for month', params);
     const month = params.month;
     const year = params.year;
     const Student = Payment.app.models.Student;
@@ -24,13 +25,22 @@ module.exports = function(Payment) {
     }
 
     const allPayments = PaymentService.getAllMonthlyPayments(students, monthPayments, month, year);
-    let res;
+    let res, payments;
     try {
       res = await Payment.create(allPayments);
     } catch (err) {
       responseHelper.throwError(err, 'Error insertando pagos');
     }
-    return responseHelper.buildResponse(res, 201);
+
+    try {
+      payments = await Payment.find({
+        where: { month, year },
+        include: ['student', 'plan', 'methodOfPayment'],
+      });
+    } catch (err) {
+      responseHelper.throwError(err, 'Error buscando pagos');
+    }
+    return responseHelper.buildResponse(payments, 201);
   };
 
   // Payment.createMultipleForStudent = async (params) => {
