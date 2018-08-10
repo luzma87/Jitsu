@@ -8,8 +8,8 @@ module.exports = function(Payment) {
 
   Payment.createForMonth = async (params) => {
     console.log('Create for month', params);
-    const month = params.month;
-    const year = params.year;
+    const month = parseInt(params.month);
+    const year = parseInt(params.year);
     const Student = Payment.app.models.Student;
     let monthPayments, students;
 
