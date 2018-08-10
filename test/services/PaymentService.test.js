@@ -19,7 +19,7 @@ const generateDate = (day = '01') => {
   };
 };
 
-const generateStudent = (enrollmentDate) => {
+const generateStudent = (enrollmentDate, active = true) => {
   let studentId = chance.integer();
   let planId = chance.integer();
   let methodOfPaymentId = chance.integer();
@@ -28,6 +28,7 @@ const generateStudent = (enrollmentDate) => {
   return {
     id: studentId,
     enrollmentDate,
+    isActive: active,
     plan: () => ({
       id: planId,
       price,
@@ -75,7 +76,7 @@ describe('PaymentService', () => {
       expect(payment).to.deep.equal(expectedPayment);
     });
 
-    it('should return the half the monthly payment' +
+    it('should return the half the monthly payment ' +
        'when enrollment date is the 16h of the current month', () => {
       const { month, year, enrollmentDate } = generateDate(16);
       const student = generateStudent(enrollmentDate);
@@ -98,7 +99,7 @@ describe('PaymentService', () => {
       expect(payment).to.deep.equal(expectedPayment);
     });
 
-    it('should return the correct portion of monthly payment' +
+    it('should return the correct portion of monthly payment ' +
        'for enrollment date assuming 30 days per month', () => {
       let day = chance.integer({ min: 1, max: 28 });
       const parsedDay = _.padStart(day, 2, '0');
@@ -189,7 +190,7 @@ describe('PaymentService', () => {
       expect(allPayments).to.deep.equal(expectedPayments);
     });
 
-    it('should return the monthly payment for the students' +
+    it('should return the monthly payment for the students ' +
        'that do not have a record for the given month/year', () => {
       const { month, year } = generateDate();
 
