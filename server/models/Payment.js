@@ -19,7 +19,10 @@ module.exports = function(Payment) {
       responseHelper.throwError(err, 'Error buscando pagos');
     }
     try {
-      students = await Student.find({ include: ['plan', 'methodOfPayment'] });
+      students = await Student.find({
+        where: { isActive: true },
+        include: ['plan', 'methodOfPayment'],
+      });
     } catch (err) {
       responseHelper.throwError(err, 'Error buscando estudiantes');
     }
