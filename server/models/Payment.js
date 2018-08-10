@@ -1,4 +1,5 @@
 'use strict';
+const moment = require('moment');
 
 const PaymentService = require('../services/PaymentService');
 const responseHelper = require('../utils/responseHelper');
@@ -13,28 +14,39 @@ module.exports = function(Payment) {
     const Student = Payment.app.models.Student;
     let monthPayments, students;
 
+    const lastDayOfMonth = moment(`10/${month}/${year}`, 'DD/M/YYYY').endOf('month');
+    const studentsFilter = {
+      where: {
+        isActive: true,
+        enrollmentDate: {
+          lte: lastDayOfMonth,
+        },
+      },
+      include: [
+        'plan',
+        'methodOfPayment',
+      ],
+    };
+
     try {
       monthPayments = await Payment.find({ where: { month, year } });
     } catch (err) {
       responseHelper.throwError(err, 'Error buscando pagos');
     }
     try {
-      students = await Student.find({
-        where: { isActive: true },
-        include: ['plan', 'methodOfPayment'],
-      });
+      students = await Student.find(studentsFilter);
     } catch (err) {
       responseHelper.throwError(err, 'Error buscando estudiantes');
     }
 
     const allPayments = PaymentService.getAllMonthlyPayments(students, monthPayments, month, year);
-    let res, payments;
     try {
-      res = await Payment.create(allPayments);
+      await Payment.create(allPayments);
     } catch (err) {
       responseHelper.throwError(err, 'Error insertando pagos');
     }
 
+    let payments;
     try {
       payments = await Payment.find({
         where: { month, year },
