@@ -8,7 +8,7 @@ const throwError = (err, message) => {
 };
 
 const buildResponse = (message, status = 200) => {
-  console.log(`BR ${status} - `, message);
+  // console.log(`BR ${status} - `, message);
   return { status: status, result: message };
 };
 
