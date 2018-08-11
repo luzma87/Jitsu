@@ -10,8 +10,8 @@
     "Plan": 4,
     "MaritalStatus": 6,
     "Params": 2,
-    "Student": 4,
-    "Payment": 4
+    "Student": 1,
+    "Payment": 1
   },
   "models": {
     "User": {},
@@ -48,12 +48,8 @@
       "1": "{\"annualFee\":60,\"daysFree\":10,\"id\":1}"
     },
     "Student": {
-      "1": "{\"id\":1,\"documentId\":\"9349349349\",\"firstName\":\"Harry\",\"lastName\":\"Potter\",\"dateOfBirth\":\"1977-09-20T00:00:00.000Z\",\"email\":\"harry@potter.com\",\"gender\":\"M\",\"address\":\"Private Drive\",\"countryOfBirth\":\"England\",\"cityOfBirth\":\"London\",\"phone\":\"12312332123\",\"mobilePhone\":\"123123123123\",\"height\":170,\"weight\":140,\"foundOut\":\"Daily prophet\",\"medicalConditions\":\"Cicatriz en la frente\",\"giSize\":\"Small\",\"planId\":3,\"rankId\":7,\"methodOfPaymentId\":1,\"isActive\":false,\"registrationDate\":\"2018-07-17T00:00:00.000Z\",\"enrollmentDate\":\"2018-09-21T00:00:00.000Z\",\"emergencyContactName\":\"Hagrid\",\"emergencyContactPhone\":\"123123111\",\"legalGuardianName\":null,\"legalGuardianPhone\":null,\"maritalStatusId\":2}",
-      "2": "{\"id\":2,\"documentId\":\"1231111111\",\"firstName\":\"Milton\",\"lastName\":\"Recursivo\",\"dateOfBirth\":\"2003-07-22T00:00:00.000Z\",\"email\":\"test@test.com\",\"gender\":\"M\",\"address\":\"san carlos\",\"countryOfBirth\":\"Ecuador\",\"cityOfBirth\":\"Quito\",\"phone\":\"123123123\",\"mobilePhone\":\"123123\",\"height\":123,\"weight\":123,\"foundOut\":\"telefono\",\"medicalConditions\":\"no\",\"giSize\":\"small\",\"planId\":3,\"rankId\":2,\"methodOfPaymentId\":1,\"isActive\":true,\"registrationDate\":\"2018-07-22T00:00:00.000Z\",\"enrollmentDate\":null,\"emergencyContactName\":\"test\",\"emergencyContactPhone\":\"test\",\"legalGuardianName\":null,\"legalGuardianPhone\":null,\"maritalStatusId\":2}",
-      "3": "{\"id\":3,\"documentId\":\"1231123123\",\"firstName\":\"Federico\",\"lastName\":\"Bernadeschi\",\"dateOfBirth\":\"1989-08-10T00:00:00.000Z\",\"email\":\"fede@rico.com\",\"gender\":\"M\",\"address\":\"san carlos\",\"countryOfBirth\":\"Italia\",\"cityOfBirth\":\"Roma\",\"phone\":\"123123123\",\"mobilePhone\":\"123123123\",\"height\":178,\"weight\":200,\"foundOut\":\"suerte\",\"medicalConditions\":\"ninguna\",\"giSize\":\"Sm\",\"planId\":3,\"rankId\":3,\"methodOfPaymentId\":2,\"isActive\":true,\"registrationDate\":\"2018-08-10T00:00:00.000Z\",\"enrollmentDate\":\"2018-08-10T00:00:00.000Z\",\"emergencyContactName\":\"test\",\"emergencyContactPhone\":\"1231231\",\"legalGuardianName\":\"test\",\"legalGuardianPhone\":\"123123\",\"maritalStatusId\":2}"
     },
     "Payment": {
-      "3": "{\"studentId\":3,\"date\":null,\"amountDue\":55,\"amountPayed\":null,\"month\":8,\"year\":2018,\"planId\":3,\"methodOfPaymentId\":2,\"id\":3}"
     }
   }
 }
